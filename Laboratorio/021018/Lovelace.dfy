@@ -66,14 +66,9 @@ ensures b== forall k:: c<=k<=f ==> esPar(v[k])
 
 
 method mprimerCero(v:array<int>) returns (i:int)
-    requires true //v.Length > 0
-    ensures forall j :: 0 <= j < v.Length ==> exists k :: 0 <= j < k < v.Length ==> v[j] != 0 && v[k] == 0
-  
-    //exists j:: esPrimerCero(v[0..v.Length],j)
-    /*
-    (forall i:: 0 <= i < k < |s| ==> s[i] != 0
-	&& s[k] == 0)
-    */
+    requires true 
+    ensures 0 <= i <= v.Length 
+    ensures esPrimerCero(v[0..v.Length], i)
 
 
 //7.Especifica un metodo que dado un vector de enteros devuelva un booleano que indica si existe algun
@@ -103,7 +98,7 @@ method mmaximo(v:array<int>) returns (i:int)
     requires true//v.Length>0
   //  ensures forall k :: 0<= k <= i < v.Length-1 ==> v[i] >= v[k]
   ensures true==false// forall j :: 0 <= j < v.Length ==> exists k :: 0 <= j <= k < v.Length ==> v[k] >= v[j]
-{}
+
 
 
 
@@ -121,9 +116,9 @@ ensures forall l::0<=l<i ==> v[l]<v[i]
 
 method multimoMaximo(v:array<int>) returns (i:int)
       requires true //v.Length>0
-    //ensures forall k :: 0<= k <= i < v.Length ==> v[i] >= v[k] && i > k
-    ensures forall j :: 0 <= j < v.Length ==> exists k :: 0 <= j < k < v.Length ==> v[k] >= v[j]
-                                        // en duda por el anterior
+      ensures 0<=i<v.Length
+      ensures forall u:: 0 <=u < v.Length ==> v[u] <= v[i]
+      ensures forall k:: i < k < v.Length ==> v[k] < v[i]
 
 //11. Especificación de un metodo que calcule el cociente y el resto de la division de naturales.
 method mdivide (a: int, b:int) returns (c:int,r:int) //O(mcd(a,b))
