@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\iker_\onedrive\escritorio\puzzleaccepted\puzzleaccepted\source.cpp(18): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\iker_\onedrive\escritorio\puzzleaccepted\puzzleaccepted\source.cpp(52): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+  PuzzleAccepted.vcxproj -> C:\Users\iker_\OneDrive\Escritorio\PuzzleAccepted\Debug\PuzzleAccepted.exe

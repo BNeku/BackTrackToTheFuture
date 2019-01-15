@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\pablo\desktop\puzzle\puzzle\source.cpp(17): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pablo\desktop\puzzle\puzzle\source.cpp(55): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  Puzzle.vcxproj -> C:\Users\Pablo\Desktop\Puzzle\Debug\Puzzle.exe
